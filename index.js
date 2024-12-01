@@ -15,6 +15,7 @@ const corsOptions = {
   methods: "GET,POST", // Allow these HTTP methods
   credentials: true,
   allowedHeaders: "Content-Type,Authorization", // Allow headers
+  preflightContinue: false,
 };
 
 app.use(cors(corsOptions)); // Enable CORS with options
