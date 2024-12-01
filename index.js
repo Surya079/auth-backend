@@ -18,7 +18,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions)); // Enable CORS with options
-app.options("*", cors());
+app.options("*", cors(corsOptions));
 app.use(express.json());
 
 app.use("/api/auth", authRouter);
