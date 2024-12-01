@@ -14,6 +14,7 @@ connectDB();
 app.use(
   cors({
     origin: "https://auth-frontend-pink.vercel.app/",
+    credentials: false,
   })
 ); // Enable CORS with options
 app.options("*", cors());
