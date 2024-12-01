@@ -102,7 +102,7 @@ export const Login = async (req, res) => {
   } catch (error) {
     console.log(error);
 
-    res.status(500).json({ success: false, error: "Server Error " });
+    res.status(500).json({ success: false, error });
   }
 };
 export const verify = (req, res) => {
