@@ -11,13 +11,12 @@ const port = process.env.PORT;
 
 connectDB();
 
-app.use(cors()); // Enable CORS with options
-app.options(
-  "*",
+app.use(
   cors({
     origin: "https://auth-frontend-pink.vercel.app/",
   })
-);
+); // Enable CORS with options
+app.options("*", cors());
 app.use(express.json());
 
 app.use("/api/auth", authRouter);
