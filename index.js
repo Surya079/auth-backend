@@ -11,7 +11,7 @@ const port = process.env.PORT;
 
 connectDB();
 const corsOptions = {
-  origin: "https://auth-frontend-pink.vercel.app" || "*", // Specify your frontend URL
+  origin: "https://auth-frontend-pink.vercel.app/", // Specify your frontend URL
   methods: "GET,POST", // Allow these HTTP methods
   credentials: true,
   allowedHeaders: "Content-Type,Authorization", // Allow headers
