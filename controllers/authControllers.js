@@ -100,9 +100,7 @@ export const Login = async (req, res) => {
       message: "Login Successfull",
     });
   } catch (error) {
-    console.log(error);
-
-    res.status(500).json({ success: false, error });
+    res.status(500).json({ success: false, message: error.message });
   }
 };
 export const verify = (req, res) => {
