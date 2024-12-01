@@ -13,6 +13,7 @@ connectDB();
 app.use(
   cors({
     origin: "https://auth-frontend-pink.vercel.app/",
+    methods: ["GET", "POST"],
     credentials: true,
   })
 );
