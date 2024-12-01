@@ -11,12 +11,14 @@ const port = process.env.PORT;
 
 connectDB();
 
-app.use(
-  cors({
-    origin: "https://auth-frontend-pink.vercel.app/",
-    credentials: false,
-  })
-); // Enable CORS with options
+// Configure CORS
+const corsOptions = {
+  origin: "https://auth-frontend-pink.vercel.app", // Replace with your frontend URL
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
+app.use(cors(corsOptions)); // Enable CORS with options
 app.options("*", cors());
 app.use(express.json());
 
