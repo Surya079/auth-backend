@@ -12,7 +12,7 @@ const port = process.env.PORT;
 connectDB();
 app.use(
   cors({
-    origin: "*",
+    origin: "https://auth-frontend-pink.vercel.app/",
     credentials: true,
   })
 );
